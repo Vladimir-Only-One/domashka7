@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 const execFileAsync = promisify(execFile);
 const app = express();
 const port = Number(process.env.PORT || 3000);
-const host = process.env.HOST || '127.0.0.1';
+const host = process.env.HOST || '0.0.0.0';
 const maxBytes = 250 * 1024 * 1024;
 const root = path.dirname(fileURLToPath(import.meta.url));
 const dataDir = path.join(root, 'data');
